@@ -4,6 +4,9 @@ const sql = require("mssql");
 
 require('custom-env').env();
 
+/**
+ * Database configuration.
+ */
 var config = {
     user: process.env.db_user,
     password: process.env.db_password,
@@ -11,6 +14,9 @@ var config = {
     database: process.env.db_name
 };
 
+/**
+ * This function will return tables in database
+ */
 app.get('/table', function (req, res) {
 
     sql.connect(config, function (err) {
@@ -39,6 +45,9 @@ app.get('/table', function (req, res) {
     });
 });
 
+/**
+ * This function will return views in database
+ */
 app.get('/view', function (req, res) {
 
     sql.connect(config, function (err) {
@@ -67,6 +76,9 @@ app.get('/view', function (req, res) {
     });
 });
 
+/**
+ * This function will return stored procedures in database
+ */
 app.get('/sp', function (req, res) {
 
     sql.connect(config, function (err) {
