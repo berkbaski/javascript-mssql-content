@@ -24,7 +24,7 @@
   "homepage": "https://github.com/berkbaski/javascript-mssql-content#readme",
   "dependencies": {
     "custom-env": "^1.0.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mssql": "^5.0.5"
   }
 }
